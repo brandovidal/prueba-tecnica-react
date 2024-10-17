@@ -60,12 +60,15 @@ function App () {
         </aside>
         <section>
           <h3>Listado de juegos</h3>
-          <section role='feed'>
-            {!hasDataLength && (
+
+          {!hasDataLength && (
+            <section>
               <article>
                 <p>No existen juegos agregados</p>
               </article>
-            )}
+            </section>
+          )}
+          <section role='feed'>
             {hasDataLength &&
               data.map(game => (
                 <Item
